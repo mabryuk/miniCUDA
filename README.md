@@ -1,5 +1,9 @@
 # PyTorch CUDA DevContainer Template
 
+<a href="https://github.com/mabryuk/miniCUDA/generate">
+  <img src="https://img.shields.io/badge/use%20this-template-blue?logo=github">
+</a>
+
 This repository provides a template for setting up a development container (DevContainer) for working with PyTorch on CUDA. This setup ensures a consistent development environment, making it easier to manage dependencies and configurations.
 
 ## Features
@@ -43,6 +47,32 @@ This repository provides a template for setting up a development container (DevC
 3. **Reopen in Container**:
     - Press `F1` and select `Remote-Containers: Reopen in Container`.
     - VS Code will build the container and open the workspace inside it.
+
+### Usage
+
+1. **Activate Conda Environment**:
+    ```bash
+    conda activate base
+    ```
+2. **Install PyTorch**:
+    ```bash
+    conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvidia
+    ```
+    make sure `pytorch-cuda=12.4` is compatible with the installed `cuda` version.
+
+3. **Test PyTorch Installation**:
+
+    `main.py`:
+    ```python
+    import torch
+    print(torch.__version__)
+    print(torch.cuda.is_available())
+    ```
+    Run the script:
+    ```bash
+    python main.py
+    ```
+
 
 ## Contributing
 
