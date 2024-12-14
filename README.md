@@ -58,7 +58,7 @@ This repository provides a template for setting up a development container (DevC
     ```bash
     conda install pytorch torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvidia
     ```
-    make sure `pytorch-cuda=12.4` is compatible with the installed `cuda` version.
+    make sure `pytorch-cuda=<PYTORCH_VERSION>` is compatible with the installed `cuda` version.
 
 3. **Test PyTorch Installation**:
 
