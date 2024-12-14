@@ -72,7 +72,11 @@ This repository provides a template for setting up a development container (DevC
     ```bash
     python main.py
     ```
-
+4. **Run export script to save the installed modules**:
+    
+    ```bash
+    .devcontainer/scripts/export.sh
+    ```
 
 ## Contributing
 
