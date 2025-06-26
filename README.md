@@ -8,8 +8,7 @@ This repository provides a template for setting up a development container (DevC
 
 ## Features
 
-- [**MiniForge3**](https://github.com/rocker-org/devcontainer-features/tree/main/src/miniforge): A minimal Conda distribution with conda-forge as the default channel.
-- [**CUDA**](https://github.com/devcontainers/features/tree/main/src/nvidia-cuda): Configured to leverage NVIDIA GPUs for deep learning tasks.
+- [**MiniForge3**](https://hub.docker.com/r/condaforge/miniforge3/tags): A minimal distribution with miniforge3, same as anaconda but with conda-forge as the default channel.
 
 ## Getting Started
 
@@ -34,22 +33,7 @@ This repository provides a template for setting up a development container (DevC
 	}
     ```
 
-4. **Choose Cuda and Cudnn versions**:
-    ```json
-    "features": {
-		"ghcr.io/devcontainers/features/nvidia-cuda:1": {
-			"installCudnn": true,
-			"installCudnnDev": true,
-			"installNvtx": true,
-			"installToolkit": true,
-			"cudaVersion": "12.4",
-			"cudnnVersion": "9.3.0.75"
-		}
-    }
-    ```
-    check the compatibility matrix [here](https://docs.nvidia.com/deeplearning/cudnn/support-matrix/index.html)
-
-5. **Reopen in Container**:
+4. **Reopen in Container**:
     - Press `F1` and select `Remote-Containers: Reopen in Container`.
     - VS Code will build the container and open the workspace inside it.
 
@@ -59,12 +43,7 @@ This repository provides a template for setting up a development container (DevC
     ```bash
     conda activate base
     ```
-2. **Install PyTorch**:
-    ```bash
-    conda install pytorch-gpu
-    ```
-
-3. **Test PyTorch Installation**:
+2. **Test PyTorch Installation**:
 
     `main.py`:
     ```python
@@ -76,7 +55,7 @@ This repository provides a template for setting up a development container (DevC
     ```bash
     python main.py
     ```
-4. **Run export script to save the installed modules**:
+3. **Run export script to save the installed modules**:
     
     ```bash
     .devcontainer/scripts/export.sh

@@ -6,17 +6,6 @@
 		"PYTHON_VERSION": "3.11"
 	},
 
-	"features": {
-		"ghcr.io/devcontainers/features/nvidia-cuda:1": {
-			"installCudnn": true,
-			"installCudnnDev": true,
-			"installNvtx": true,
-			"installToolkit": true,
-			"cudaVersion": "12.4",
-			"cudnnVersion": "9.3.0.75"
-		}
-	},
-
 	"runArgs": [
 		"--gpus",
 		"all"
