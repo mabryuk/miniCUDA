@@ -3,6 +3,8 @@ if [[ -z "${PYTHON_VERSION}" ]]; then
   PYTHON_VERSION="3.11"
 fi
 
+apt-get update -y
+
 echo "conda init"
 conda init bash
 
@@ -25,6 +27,9 @@ fi
 
 echo "installing pytorch and the cuda dependecies ..."
 conda install conda-forge::pytorch -y
+
+echo "installing jupyter kernel support ..."
+conda install ipykernel -y
 
 echo "saving the conda environment ..."
 ./.devcontainer/scripts/export.sh
